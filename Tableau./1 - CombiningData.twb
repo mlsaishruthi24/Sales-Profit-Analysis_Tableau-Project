@@ -1,0 +1,1192 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sales+' inline='true' name='federated.0ye6nqq1o6qtoj10ijzq70yvcwiz' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Sales' name='textscan.1nhuduo0f5stv41cwvp5708ua8ie'>
+            <connection class='textscan' directory='C:/Users/M.L.Sai Shruthi/Downloads/Data Analytics - EXCEL, SQL n TABLEAU/TABLEAU/45' filename='Sales.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.1nhuduo0f5stv41cwvp5708ua8ie' name='Sales.csv' table='[Sales#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='Order Line' ordinal='0' />
+              <column datatype='string' name='Order ID' ordinal='1' />
+              <column datatype='date' name='Order Date' ordinal='2' />
+              <column datatype='date' name='Ship Date' ordinal='3' />
+              <column datatype='string' name='Ship Mode' ordinal='4' />
+              <column datatype='string' name='Customer ID' ordinal='5' />
+              <column datatype='string' name='Product ID' ordinal='6' />
+              <column datatype='real' name='Sales' ordinal='7' />
+              <column datatype='integer' name='Quantity' ordinal='8' />
+              <column datatype='real' name='Discount' ordinal='9' />
+              <column datatype='real' name='Profit' ordinal='10' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1nhuduo0f5stv41cwvp5708ua8ie' name='Customer.csv' table='[Customer#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Customer ID' ordinal='0' />
+              <column datatype='string' name='Customer Name' ordinal='1' />
+              <column datatype='string' name='Segment' ordinal='2' />
+              <column datatype='integer' name='Age' ordinal='3' />
+              <column datatype='string' name='Country' ordinal='4' />
+              <column datatype='string' name='City' ordinal='5' />
+              <column datatype='string' name='State' ordinal='6' />
+              <column datatype='integer' name='Postal Code' ordinal='7' />
+              <column datatype='string' name='Region' ordinal='8' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Age]' value='[Customer.csv].[Age]' />
+          <map key='[City]' value='[Customer.csv].[City]' />
+          <map key='[Country]' value='[Customer.csv].[Country]' />
+          <map key='[Customer ID (Customer.csv)]' value='[Customer.csv].[Customer ID]' />
+          <map key='[Customer ID]' value='[Sales.csv].[Customer ID]' />
+          <map key='[Customer Name]' value='[Customer.csv].[Customer Name]' />
+          <map key='[Discount]' value='[Sales.csv].[Discount]' />
+          <map key='[Order Date]' value='[Sales.csv].[Order Date]' />
+          <map key='[Order ID]' value='[Sales.csv].[Order ID]' />
+          <map key='[Order Line]' value='[Sales.csv].[Order Line]' />
+          <map key='[Postal Code]' value='[Customer.csv].[Postal Code]' />
+          <map key='[Product ID]' value='[Sales.csv].[Product ID]' />
+          <map key='[Profit]' value='[Sales.csv].[Profit]' />
+          <map key='[Quantity]' value='[Sales.csv].[Quantity]' />
+          <map key='[Region]' value='[Customer.csv].[Region]' />
+          <map key='[Sales]' value='[Sales.csv].[Sales]' />
+          <map key='[Segment]' value='[Customer.csv].[Segment]' />
+          <map key='[Ship Date]' value='[Sales.csv].[Ship Date]' />
+          <map key='[Ship Mode]' value='[Sales.csv].[Ship Mode]' />
+          <map key='[State]' value='[Customer.csv].[State]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Line</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Order Line]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Order Line</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Order ID]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Order ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Order Date]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Order Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Ship Date]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Ship Date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Mode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ship Mode]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Ship Mode</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product ID]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Product ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Discount]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Discount</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Profit]</local-name>
+            <parent-name>[Sales.csv]</parent-name>
+            <remote-alias>Profit</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_2C661A56671548A18552E5B7B8B933FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer ID (Customer.csv)]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer Name]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Customer Name</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Segment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Segment]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Segment</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Postal Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Postal Code]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Postal Code</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Customer.csv' datatype='table' name='[__tableau_internal_object_id__].[Customer.csv_5EF4130C97E2466A8A68AC5D135585E9]' role='measure' type='quantitative' />
+      <column caption='Sales.csv' datatype='table' name='[__tableau_internal_object_id__].[Sales.csv_2C661A56671548A18552E5B7B8B933FC]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Customer.csv' id='Customer.csv_5EF4130C97E2466A8A68AC5D135585E9'>
+            <properties context=''>
+              <relation connection='textscan.1nhuduo0f5stv41cwvp5708ua8ie' name='Customer.csv' table='[Customer#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Customer ID' ordinal='0' />
+                  <column datatype='string' name='Customer Name' ordinal='1' />
+                  <column datatype='string' name='Segment' ordinal='2' />
+                  <column datatype='integer' name='Age' ordinal='3' />
+                  <column datatype='string' name='Country' ordinal='4' />
+                  <column datatype='string' name='City' ordinal='5' />
+                  <column datatype='string' name='State' ordinal='6' />
+                  <column datatype='integer' name='Postal Code' ordinal='7' />
+                  <column datatype='string' name='Region' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Sales.csv' id='Sales.csv_2C661A56671548A18552E5B7B8B933FC'>
+            <properties context=''>
+              <relation connection='textscan.1nhuduo0f5stv41cwvp5708ua8ie' name='Sales.csv' table='[Sales#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Order Line' ordinal='0' />
+                  <column datatype='string' name='Order ID' ordinal='1' />
+                  <column datatype='date' name='Order Date' ordinal='2' />
+                  <column datatype='date' name='Ship Date' ordinal='3' />
+                  <column datatype='string' name='Ship Mode' ordinal='4' />
+                  <column datatype='string' name='Customer ID' ordinal='5' />
+                  <column datatype='string' name='Product ID' ordinal='6' />
+                  <column datatype='real' name='Sales' ordinal='7' />
+                  <column datatype='integer' name='Quantity' ordinal='8' />
+                  <column datatype='real' name='Discount' ordinal='9' />
+                  <column datatype='real' name='Profit' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Customer ID]' />
+              <expression op='[Customer ID (Customer.csv)]' />
+            </expression>
+            <first-end-point object-id='Sales.csv_2C661A56671548A18552E5B7B8B933FC' />
+            <second-end-point object-id='Customer.csv_5EF4130C97E2466A8A68AC5D135585E9' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+    <datasource caption='Sales' inline='true' name='federated.0n305n21jzuznv124cr0b1y55iob' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Sales' name='textscan.18ubhrk1uc4w2w10adj7914600zv'>
+            <connection class='textscan' directory='C:/Users/M.L.Sai Shruthi/Downloads/Data Analytics - EXCEL, SQL n TABLEAU/TABLEAU/45' filename='Sales.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation all='true' name='Sales.csv+' type='union'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='Order Line' />
+              <column datatype='string' name='Order ID' />
+              <column datatype='date' name='Order Date' />
+              <column datatype='date' name='Ship Date' />
+              <column datatype='string' name='Ship Mode' />
+              <column datatype='string' name='Customer ID' />
+              <column datatype='string' name='Product ID' />
+              <column datatype='real' name='Sales' />
+              <column datatype='integer' name='Quantity' />
+              <column datatype='real' name='Discount' />
+              <column datatype='real' name='Profit' />
+              <column datatype='string' name='Table Name' />
+            </columns>
+            <relation connection='textscan.18ubhrk1uc4w2w10adj7914600zv' name='Sales.csv' table='[Sales#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                <column datatype='integer' name='Order Line' ordinal='0' />
+                <column datatype='string' name='Order ID' ordinal='1' />
+                <column datatype='date' name='Order Date' ordinal='2' />
+                <column datatype='date' name='Ship Date' ordinal='3' />
+                <column datatype='string' name='Ship Mode' ordinal='4' />
+                <column datatype='string' name='Customer ID' ordinal='5' />
+                <column datatype='string' name='Product ID' ordinal='6' />
+                <column datatype='real' name='Sales' ordinal='7' />
+                <column datatype='integer' name='Quantity' ordinal='8' />
+                <column datatype='real' name='Discount' ordinal='9' />
+                <column datatype='real' name='Profit' ordinal='10' />
+              </columns>
+            </relation>
+            <relation connection='textscan.18ubhrk1uc4w2w10adj7914600zv' name='Bugsales.csv' table='[Bugsales#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                <column datatype='integer' name='Order Line' ordinal='0' />
+                <column datatype='string' name='Order ID' ordinal='1' />
+                <column datatype='date' name='Order Date' ordinal='2' />
+                <column datatype='date' name='Ship Date' ordinal='3' />
+                <column datatype='string' name='Ship Mode' ordinal='4' />
+                <column datatype='string' name='Customer ID' ordinal='5' />
+                <column datatype='string' name='Product ID' ordinal='6' />
+                <column datatype='real' name='Sales' ordinal='7' />
+                <column datatype='integer' name='Quantity' ordinal='8' />
+                <column datatype='real' name='Discount' ordinal='9' />
+                <column datatype='real' name='Profit' ordinal='10' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.18ubhrk1uc4w2w10adj7914600zv' name='Customer.csv' table='[Customer#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Customer ID' ordinal='0' />
+              <column datatype='string' name='Customer Name' ordinal='1' />
+              <column datatype='string' name='Segment' ordinal='2' />
+              <column datatype='integer' name='Age' ordinal='3' />
+              <column datatype='string' name='Country' ordinal='4' />
+              <column datatype='string' name='City' ordinal='5' />
+              <column datatype='string' name='State' ordinal='6' />
+              <column datatype='integer' name='Postal Code' ordinal='7' />
+              <column datatype='string' name='Region' ordinal='8' />
+            </columns>
+          </relation>
+          <relation connection='textscan.18ubhrk1uc4w2w10adj7914600zv' name='Product.csv' table='[Product#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Product ID' ordinal='0' />
+              <column datatype='string' name='Category' ordinal='1' />
+              <column datatype='string' name='Sub-Category' ordinal='2' />
+              <column datatype='string' name='Product Name' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Age]' value='[Customer.csv].[Age]' />
+          <map key='[Category]' value='[Product.csv].[Category]' />
+          <map key='[City]' value='[Customer.csv].[City]' />
+          <map key='[Country]' value='[Customer.csv].[Country]' />
+          <map key='[Customer ID (Customer.csv)]' value='[Customer.csv].[Customer ID]' />
+          <map key='[Customer ID]' value='[Sales.csv+].[Customer ID]' />
+          <map key='[Customer Name]' value='[Customer.csv].[Customer Name]' />
+          <map key='[Discount]' value='[Sales.csv+].[Discount]' />
+          <map key='[Order Date]' value='[Sales.csv+].[Order Date]' />
+          <map key='[Order ID]' value='[Sales.csv+].[Order ID]' />
+          <map key='[Order Line]' value='[Sales.csv+].[Order Line]' />
+          <map key='[Postal Code]' value='[Customer.csv].[Postal Code]' />
+          <map key='[Product ID (Product.csv)]' value='[Product.csv].[Product ID]' />
+          <map key='[Product ID]' value='[Sales.csv+].[Product ID]' />
+          <map key='[Product Name]' value='[Product.csv].[Product Name]' />
+          <map key='[Profit]' value='[Sales.csv+].[Profit]' />
+          <map key='[Quantity]' value='[Sales.csv+].[Quantity]' />
+          <map key='[Region]' value='[Customer.csv].[Region]' />
+          <map key='[Sales]' value='[Sales.csv+].[Sales]' />
+          <map key='[Segment]' value='[Customer.csv].[Segment]' />
+          <map key='[Ship Date]' value='[Sales.csv+].[Ship Date]' />
+          <map key='[Ship Mode]' value='[Sales.csv+].[Ship Mode]' />
+          <map key='[State]' value='[Customer.csv].[State]' />
+          <map key='[Sub-Category]' value='[Product.csv].[Sub-Category]' />
+          <map key='[Table Name]' value='[Sales.csv+].[Table Name]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Product.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Line</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Order Line]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Order Line</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Order ID]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Order ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Order Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Order Date]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Order Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Ship Date]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Ship Date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ship Mode</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Ship Mode]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Ship Mode</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product ID]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Product ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Sales]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Sales</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Discount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Discount]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Discount</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Profit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Profit]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Profit</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[Sales.csv+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer ID (Customer.csv)]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer Name]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Customer Name</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Segment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Segment]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Segment</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Postal Code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Postal Code]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Postal Code</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Customer.csv]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product ID (Product.csv)]</local-name>
+            <parent-name>[Product.csv]</parent-name>
+            <remote-alias>Product ID</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Product.csv_D5DC9E2BB12D4932846919F7D8C86DA6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[Product.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Product.csv_D5DC9E2BB12D4932846919F7D8C86DA6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sub-Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sub-Category]</local-name>
+            <parent-name>[Product.csv]</parent-name>
+            <remote-alias>Sub-Category</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Product.csv_D5DC9E2BB12D4932846919F7D8C86DA6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product Name]</local-name>
+            <parent-name>[Product.csv]</parent-name>
+            <remote-alias>Product Name</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Product.csv_D5DC9E2BB12D4932846919F7D8C86DA6]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Region1' datatype='string' name='[Region]' role='dimension' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Customer data' datatype='table' name='[__tableau_internal_object_id__].[Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7]' role='measure' type='quantitative' />
+      <column caption='Product data' datatype='table' name='[__tableau_internal_object_id__].[Product.csv_D5DC9E2BB12D4932846919F7D8C86DA6]' role='measure' type='quantitative' />
+      <column caption='Sales data' datatype='table' name='[__tableau_internal_object_id__].[Sales.csv_0F19BCF38C174ECBB3C9473E05514535]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='500' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Customer data' id='Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7'>
+            <properties context=''>
+              <relation connection='textscan.18ubhrk1uc4w2w10adj7914600zv' name='Customer.csv' table='[Customer#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Customer ID' ordinal='0' />
+                  <column datatype='string' name='Customer Name' ordinal='1' />
+                  <column datatype='string' name='Segment' ordinal='2' />
+                  <column datatype='integer' name='Age' ordinal='3' />
+                  <column datatype='string' name='Country' ordinal='4' />
+                  <column datatype='string' name='City' ordinal='5' />
+                  <column datatype='string' name='State' ordinal='6' />
+                  <column datatype='integer' name='Postal Code' ordinal='7' />
+                  <column datatype='string' name='Region' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Product data' id='Product.csv_D5DC9E2BB12D4932846919F7D8C86DA6'>
+            <properties context=''>
+              <relation connection='textscan.18ubhrk1uc4w2w10adj7914600zv' name='Product.csv' table='[Product#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Product ID' ordinal='0' />
+                  <column datatype='string' name='Category' ordinal='1' />
+                  <column datatype='string' name='Sub-Category' ordinal='2' />
+                  <column datatype='string' name='Product Name' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Sales data' id='Sales.csv_0F19BCF38C174ECBB3C9473E05514535'>
+            <properties context=''>
+              <relation all='true' name='Sales.csv+' type='union'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Order Line' />
+                  <column datatype='string' name='Order ID' />
+                  <column datatype='date' name='Order Date' />
+                  <column datatype='date' name='Ship Date' />
+                  <column datatype='string' name='Ship Mode' />
+                  <column datatype='string' name='Customer ID' />
+                  <column datatype='string' name='Product ID' />
+                  <column datatype='real' name='Sales' />
+                  <column datatype='integer' name='Quantity' />
+                  <column datatype='real' name='Discount' />
+                  <column datatype='real' name='Profit' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='textscan.18ubhrk1uc4w2w10adj7914600zv' name='Sales.csv' table='[Sales#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                    <column datatype='integer' name='Order Line' ordinal='0' />
+                    <column datatype='string' name='Order ID' ordinal='1' />
+                    <column datatype='date' name='Order Date' ordinal='2' />
+                    <column datatype='date' name='Ship Date' ordinal='3' />
+                    <column datatype='string' name='Ship Mode' ordinal='4' />
+                    <column datatype='string' name='Customer ID' ordinal='5' />
+                    <column datatype='string' name='Product ID' ordinal='6' />
+                    <column datatype='real' name='Sales' ordinal='7' />
+                    <column datatype='integer' name='Quantity' ordinal='8' />
+                    <column datatype='real' name='Discount' ordinal='9' />
+                    <column datatype='real' name='Profit' ordinal='10' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.18ubhrk1uc4w2w10adj7914600zv' name='Bugsales.csv' table='[Bugsales#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                    <column datatype='integer' name='Order Line' ordinal='0' />
+                    <column datatype='string' name='Order ID' ordinal='1' />
+                    <column datatype='date' name='Order Date' ordinal='2' />
+                    <column datatype='date' name='Ship Date' ordinal='3' />
+                    <column datatype='string' name='Ship Mode' ordinal='4' />
+                    <column datatype='string' name='Customer ID' ordinal='5' />
+                    <column datatype='string' name='Product ID' ordinal='6' />
+                    <column datatype='real' name='Sales' ordinal='7' />
+                    <column datatype='integer' name='Quantity' ordinal='8' />
+                    <column datatype='real' name='Discount' ordinal='9' />
+                    <column datatype='real' name='Profit' ordinal='10' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Customer ID]' />
+              <expression op='[Customer ID (Customer.csv)]' />
+            </expression>
+            <first-end-point object-id='Sales.csv_0F19BCF38C174ECBB3C9473E05514535' />
+            <second-end-point object-id='Customer.csv_A9FF40D97ABA414681238A6BE26A2FD7' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Product ID]' />
+              <expression op='[Product ID (Product.csv)]' />
+            </expression>
+            <first-end-point object-id='Sales.csv_0F19BCF38C174ECBB3C9473E05514535' />
+            <second-end-point object-id='Product.csv_D5DC9E2BB12D4932846919F7D8C86DA6' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sales' name='federated.0n305n21jzuznv124cr0b1y55iob' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0n305n21jzuznv124cr0b1y55iob'>
+            <column caption='Region1' datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Sales]' role='measure' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales]' derivation='Sum' name='[sum:Sales:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0n305n21jzuznv124cr0b1y55iob].[none:Region:nk]</rows>
+        <cols>[federated.0n305n21jzuznv124cr0b1y55iob].[sum:Sales:qk]</cols>
+      </table>
+      <simple-id uuid='{D6F7ED7B-26B3-4B55-95DC-85E3EF26390B}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='51'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0n305n21jzuznv124cr0b1y55iob].[none:Region:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{87DA8C98-D266-4A8E-934C-61CE1DA6D01E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='159' name='Sheet 1' width='192'>
+      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
+      iM9K98gAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
