@@ -1,4 +1,4 @@
-# 📊 Data Analytics Practice — Excel, SQL & Tableau
+# 📊 Sales & Profit-Analysis_Tableau Project — Excel, SQL & Tableau
 
 A comprehensive collection of hands-on practice files covering data analysis, visualization, and database querying using **Microsoft Excel**, **PostgreSQL**, and **Tableau**.
 
@@ -90,7 +90,33 @@ Scripts covering PostgreSQL from basics to advanced, practiced on a retail datas
 
 ## 🟠 Tableau Practice
 
-*(Tableau workbook files — dashboards and visualizations coming soon)*
+Tableau workbooks covering data connection, chart building, and dashboard creation using retail sales data.
+
+| File | Topics Covered |
+|---|---|
+| `1_-_CombiningData.twb` | Connecting & combining data sources |
+| `2_-_ChangingDataTypes.twb` | Changing data types in Tableau |
+| `3_-_MostUsedCharts.twb` | Bar, line, pie and other commonly used charts |
+| `4_-_CustomizeChartsUsingMarks.twb` | Customizing charts using Marks card |
+| `5_-_DroppingDimensions_MeasuresOnMarks.twb` | Using dimensions & measures on Marks |
+| `6_-_MapChart.twb` | Map charts & geographic visualizations |
+| `6_-_MapChart_-_DataBlending.twb` | Map charts with data blending |
+| `7_-_Calculation_Analytics.twb` | Calculated fields & analytics |
+| `7_-_Calculation_Analytics_-_LOD.twb` | Level of Detail (LOD) expressions |
+| `8_-_Sets_Parameters.twb` | Sets & Parameters |
+| `9_-_Dashboard_Story.twb` | Building Dashboards & Stories |
+
+### Topics Covered
+- ✅ Connecting & Combining Data Sources
+- ✅ Data Types & Transformations
+- ✅ Most Used Chart Types
+- ✅ Marks Card Customization
+- ✅ Dimensions & Measures
+- ✅ Map Charts & Data Blending
+- ✅ Calculated Fields & Analytics
+- ✅ Level of Detail (LOD) Expressions
+- ✅ Sets & Parameters
+- ✅ Dashboards & Stories
 
 ---
 
